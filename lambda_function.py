@@ -4,7 +4,7 @@ import uuid
 
 s3_client = boto3.client('s3')
 object_key = 'HtmlToJson'
-bucket_name = 'html-parser-rsutariya'
+bucket_name = 'html-parser-rsutariya1'
 
 def convert_to_html(json_object, build_direction="LEFT_TO_RIGHT", table_attributes=None):
     build_direction = "LEFT_TO_RIGHT"
