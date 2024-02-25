@@ -1,0 +1,35 @@
+{
+  "name": "John Doe",
+  "age": 30,
+  "email": "john.doe@example.com",
+  "address": {
+    "street": "123 Main Street",
+    "city": "Anytown",
+    "state": "CA",
+    "postal_code": "12345"
+  },
+  "phone_numbers": [
+    {
+      "type": "home",
+      "number": "555-1234"
+    },
+    {
+      "type": "work",
+      "number": "555-5678"
+    }
+  ],
+  "is_active": true,
+  "skills": ["Python", "JavaScript", "SQL"],
+  "experience": [
+    {
+      "title": "Software Engineer",
+      "company": "ABC Corp",
+      "years": 5
+    },
+    {
+      "title": "Web Developer",
+      "company": "XYZ Inc",
+      "years": 3
+    }
+  ]
+}
