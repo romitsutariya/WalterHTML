@@ -3,8 +3,8 @@ import boto3
 import uuid
 
 s3_client = boto3.client('s3')
-object_key = 'HtmlToJson'
-bucket_name = 'html-parser-rsutariya1'
+object_key = 'json_to_html'
+bucket_name = 'walter-json-to-html-deveopment'
 
 def convert_to_html(json_object, build_direction="LEFT_TO_RIGHT", table_attributes=None):
     build_direction = "LEFT_TO_RIGHT"
@@ -14,9 +14,9 @@ def convert_to_html(json_object, build_direction="LEFT_TO_RIGHT", table_attribut
     return html
 
 def save_content_to_file(html_data):
-    random_key = f"{object_key}_random_{uuid.uuid4()}.html"
+    random_key = f"{object_key}_{uuid.uuid4()}.html"
     s3_client.put_object(Bucket=bucket_name, Key=random_key, Body=html_data)
-    print(f"File '{random_key}' created successfully in bucket")
+    print(f"File '{random_key}' created successfully in bucket {bucket_name}")
 
 def lambda_handler(event, context):
     html_data=convert_to_html(event)
